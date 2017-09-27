@@ -123,6 +123,13 @@ sudo make install
 sudo ldconfig
 ```
 
+You will need pkg-config to know the directory containing 'libpostal.pc': if not, run
+
+```
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/path/to/folder/libpostal
+echo "export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/path/to/folder/libpostal" | tee -a ~/.bashrc
+```
+
 libpostal has support for pkg-config, so you can use the pkg-config to print the flags needed to link your program against it:
 
 ```
